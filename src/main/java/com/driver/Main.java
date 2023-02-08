@@ -1,8 +1,14 @@
 package com.driver;
 
 public class Main {
-    RWOnly obj = new RWOnly();
-    // if setter is not created error is :'name' has private access in 'RWOnly'
-    obj.setName("Nikhil Rawat");
-    System.out.println(obj.getName());
+    public static void main(String[] args) {
+        RWOnly rwOnly = new RWOnly();
+//            rwOnly.name = "nikhil";
+//        System.out.println(rwOnly.name);
+//            'name' has private access in 'com.driver.RWOnly'
+        rwOnly.setName("Nikhil Rawat");
+        String name = rwOnly.getName();
+        System.out.println(name);
+    }
+
 }
